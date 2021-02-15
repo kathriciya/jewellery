@@ -7,40 +7,56 @@
     <title>Jewellery</title>
     <meta name="Description" content="Jewellery">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/CormorantGaramond-Bold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/CormorantGaramond-MediumItalic.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/CormorantGaramond-RegularItalic.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/CormorantGaramond-SemiBold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Poppins-Medium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Poppins-Regular.woff2" as="font" crossorigin="anonymous">
   </head>
   <body>
-    <header class="header">
-      <div class="header__container container">
-        <nav>
-
-        <button type="button">
-          <span class="visually-hidden">Open menu</span>
-          <svg class="main-menu-toggle__svg-icon" width="25" height="16">
+    <header class="header header--catalog header--closed header--nojs">
+      <div class="header__container header__container--catalog container">
+        <button class="header__toggle" type="button">
+          <svg width="25" height="19">
             <use xlink:href="img/sprite_auto.svg#icon-toggle"></use>
           </svg>
         </button>
 
         <div class="header__search search">
           <form action="https://echo.htmlacademy.ru" method="POST" enctype="multipart/form-data">
+            <div class="search__inner">
             <input type="search" name="search" id="search" placeholder="Type here to search" required="">
             <label for="search">
-              <span class="visually-hidden">Search</span>
-            </label>
-            <span>
               <svg width="14" height="14">
                 <use xlink:href="img/sprite_auto.svg#icon-search"></use>
               </svg>
-            </span>
-            <button class="visually-hidden" type="submit">Search</button>
+            </label>
+          </div>
           </form>
         </div>
 
         <div class="header__logo">
-          <a href="#">
-            <img src="img/sprite_auto.svg#logo" width="66" height="66" alt="Logo">
+          <a href="index.html" aria-label="Logo">
+            <svg width="66" height="66">
+              <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
+            </svg>
           </a>
         </div>
-        <ul>
+
+        <button class="header__login popup-open popup-open--login" type="button">Login</button>
+
+        <div class="header__cart header__cart--catalog">
+          <a href="#" aria-label="User cart">
+            <span>Cart 0</span>
+            <svg width="18" height="16">
+              <use xlink:href="img/sprite_auto.svg#icon-cart"></use>
+            </svg>
+          </a>
+        </div>
+
+        <nav class="header__nav nav">
+        <ul class="nav__site-menu">
           <li>
             <a href="#">What’s new</a>
           </li>
@@ -58,7 +74,7 @@
           </li>
         </ul>
 
-        <ul>
+        <ul class="nav__site-menu nav__site-menu--about-us">
           <li>
             <a href="#">About CH</a>
           </li>
@@ -69,74 +85,41 @@
             <a href="#">Contact Us</a>
           </li>
         </ul>
-        <button type="button">Login</button>
-        <div>
-          <a href="#" aria-label="User cart">
-            <span>Cart 0</span>
-            <svg width="18" height="16">
-              <use xlink:href="img/sprite_auto.svg#icon-cart"></use>
-            </svg>
-          </a>
-        </div>
       </nav>
       </div>
-
-      <div class="header__popup popup">
-        <div class="popup__wrap">
-          <button class="popup__close" type="button">
-            <span class="visually-hidden">Close</span>
-              <svg width="14" height="14">
-                <use xlink:href="img/sprite_auto.svg#icon-close-popup"></use>
-              </svg>
-          </button>
-          <p>Log In</p>
-          <form action="https://echo.htmlacademy.ru" method="POST" enctype="multipart/form-data">
-              <div class="popup__inner">
-                <input type="email" name="popup-email" id="popup-email" placeholder="Your E-mail" required="">
-                <label class="visually-hidden" for="popup-email">Your E-mail</label>
-              </div>
-              <div class="popup__inner">
-                 <input type="password" name="popup-password" id="popup-password" placeholder="Password" required="">
-                <label class="visually-hidden">Your password</label>
-              </div>
-            </form></div>
-            <div class="popup__forgot">
-              <a href="#">Forgot your password?</a>
-            </div>
-              <button type="submit">Log In</button>
-              <p>Don’t have an account?<a href="#">Sign up</a></p>
-          
-        </div>
-      
-
     </header>
 
-    <main>
+    <main class="main-page">
+      <h1 class="visually-hidden">Catalog</h1>
+
       <section class="promo-catalog">
+        <div class="promo-catalog__container container">
         <h2>All jewellery</h2>
         <p>Discover picks of fashion's finest trends in our jewellery catalog</p>
+      </div>
       </section>
 
       <section class="catalog">
         <div class="catalog__container container">
-          <button type="button">Filter</button>
+
+          <a class="catalog__filter-btn" href="filter.html">Filter</a>
+
           <div class="catalog__filter filter">
-            <button type="button">
-              <span class="visually-hidden">Close filter</span>
-              <svg width="32" height="32">
-                <use xlink:href="img/sprite_auto.svg#icon-close-filter"></use>
-              </svg>
-            </button>
-            <form action="https://echo.htmlacademy.ru" method="POST" enctype="multipart/form-data">
-              <ul>
-                <li>
-                  <a href="#">
-                    <span>Product</span>
-                    <svg width="15" height="8">
-                      <use xlink:href="img/sprite_auto.svg#icon-arrow-filter"></use>
-                    </svg>
-                  </a>
-                  <ul>
+
+
+            <!-- Форма -->
+            <form class="filter__form filter__form--nojs" action="https://echo.htmlacademy.ru" method="POST" enctype="multipart/form-data">
+
+              <button class="filter__close" type="button">
+                <span class="visually-hidden">Close filter</span>
+                <svg width="32" height="32">
+                  <use xlink:href="img/sprite_auto.svg#icon-close-filter"></use>
+                </svg>
+              </button>
+
+              <fieldset class="filter__item filter__item--open">
+                  <button class="filter__group" type="button">Product</button>
+                  <ul class="filter__list">
                     <li>
                       <input class="visually-hidden" type="checkbox" name="necklaces" id="necklaces" checked="">
                       <label for="necklaces">Necklaces</label>
@@ -146,7 +129,7 @@
                       <label for="chokers">Chokers</label>
                     </li>
                     <li>
-                      <input class="visually-hidden" type="checkbox" name="rings" id="rings" checked="">
+                      <input class="visually-hidden" type="checkbox" name="rings" id="rings">
                       <label for="rings">Rings</label>
                     </li>
                     <li>
@@ -154,78 +137,76 @@
                       <label for="earrings">Earrings</label>
                     </li>
                   </ul>
-                </li>
-                <li>
-                  <a href="#">
-                    <span>Material</span>
-                    <svg width="15" height="8">
-                      <use xlink:href="img/sprite_auto.svg#icon-arrow-filter"></use>
-                    </svg>
-                  </a>
-                  <ul>
+                </fieldset>
+
+
+                <fieldset class="filter__item">
+                  <button class="filter__group" type="button">Material</button>
+                  <ul class="filter__list">
                     <li>
                       <input class="visually-hidden" type="checkbox" name="gold" id="gold" checked="">
                       <label for="gold">Gold</label>
                     </li>
                     <li>
-                      <input class="visually-hidden" type="checkbox" name="silver" id="silver" checked="">
+                      <input class="visually-hidden" type="checkbox" name="silver" id="silver">
                       <label for="silver">Silver</label>
                     </li>
                   </ul>
-                </li>
-                <li>
-                  <a href="#">
-                    <span>Collection</span>
-                    <svg width="15" height="8">
-                      <use xlink:href="img/sprite_auto.svg#icon-arrow-filter"></use>
-                    </svg>
-                  </a>
-                  <ul>
+                </fieldset>
+
+
+                <fieldset class="filter__item">
+                  <button class="filter__group" type="button">Collection</button>
+                  <ul class="filter__list">
                     <li>
                       <input class="visually-hidden" type="checkbox" name="pink-flamingo" id="pink-flamingo" checked="">
                       <label for="pink-flamingo">Pink flamingo</label>
                     </li>
                     <li>
-                      <input class="visually-hidden" type="checkbox" name="dreams" id="dreams" checked="">
+                      <input class="visually-hidden" type="checkbox" name="dreams" id="dreams">
                       <label for="dreams">Dreams</label>
                     </li>
                   </ul>
-                </li>
-                <li>
-                  <a href="#">
-                    <span>Price</span>
-                    <svg width="15" height="8">
-                      <use xlink:href="img/sprite_auto.svg#icon-arrow-filter"></use>
-                    </svg>
-                  </a>
-                  <div class="filter__price">
-                    <div class="filter__controls">
-                      <div class="filter__scale">
-                        <div class="filter__bar"></div>
+                </fieldset>
+
+
+                <fieldset class="filter__item filter__item--open">
+                  <button class="filter__group" type="button">Price</button>
+
+                  <div class="filter__price price">
+
+                    <div class="price__controls">
+                      <div class="price__scale">
+                        <div class="price__bar"></div>
                       </div>
-                      <div class="filter__toggle filter__toggle-min"></div>
-                      <div class="filter__toggle filter__toggle-max"></div>
+                      <div class="price__toggle price__toggle-min"></div>
+                      <div class="price__toggle price__toggle-max"></div>
                     </div>
-                    <div class="filter__price-controls">
-                      <label class="filter__min-price">$
-                        <input name="min-price" type="number" value="55">
+
+                    <div class="price__range">
+                      <label class="price__min-price" for="min-price">$
+                        <input name="min-price" type="number" id="min-price" value="55">
                       </label>
-                      <label class="filter__max-price">$
-                        <input name="max-price" type="number" value="155">
+                      <label class="price__max-price" for="max-price">$
+                        <input name="max-price" type="number" id="max-price" value="155">
                       </label>
                     </div>
+
                   </div>
-                </li>
-              </ul>
-              <button type="submit">Apply</button>
-              <button type="reset">Clear All</button>
+              </fieldset>
+              <button class="filter__btn " type="submit">Apply</button>
+              <button class="filter__btn filter__btn--clear" type="reset">Clear All</button>
             </form>
           </div>
+
+          <!-- Список -->
+
+          <div class="catalog__left">
 
           <div class="catalog__cards">
             <ul>
               <li>
-                <a href="#">
+                <a href="product.html">
                   <div class="catalog__img">
                     <picture>
                       <!-- 1х: 130px; 2x: 260px -->
@@ -240,13 +221,14 @@
                       <source media="(max-width: 1023px)" srcset="img/card1-tablet@1x.jpg 1x, img/card1-tablet@2x.jpg 2x">
                       <!-- 1х: 270px; 2x: 540px --> <img src="img/card1-desktop@1x.jpg" srcset="img/card1-desktop@2x.jpg 2x" alt="Double pearl earrings" width="270" height="272">
                     </picture>
-                  </div>
+
                   <p>Double pearl earrings</p>
                   <span>$ 115</span>
+                </div>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="product.html">
                   <div class="catalog__img">
                     <picture>
                       <!-- 1х: 130px; 2x: 260px -->
@@ -261,13 +243,13 @@
                       <source media="(max-width: 1023px)" srcset="img/card2-tablet@1x.jpg 1x, img/card2-tablet@2x.jpg 2x">
                       <!-- 1х: 270px; 2x: 540px --> <img src="img/card2-desktop@1x.jpg" srcset="img/card2-desktop@2x.jpg 2x" alt="Choker with gold bead" width="270" height="272">
                     </picture>
-                  </div>
                   <p>Choker with gold bead</p>
                   <span>$ 55</span>
+                </div>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="product.html">
                   <div class="catalog__img">
                     <picture>
                       <!-- 1х: 130px; 2x: 260px -->
@@ -282,13 +264,13 @@
                       <source media="(max-width: 1023px)" srcset="img/card3-tablet@1x.jpg 1x, img/card3-tablet@2x.jpg 2x">
                       <!-- 1х: 270px; 2x: 540px --> <img src="img/card3-desktop@1x.jpg" srcset="img/card3-desktop@2x.jpg 2x" alt="Gold layered necklace" width="270" height="272">
                     </picture>
-                  </div>
                   <p>Gold layered necklace</p>
                   <span>$ 155</span>
+                </div>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="product.html">
                   <div class="catalog__img">
                     <picture>
                       <!-- 1х: 130px; 2x: 260px -->
@@ -303,13 +285,14 @@
                       <source media="(max-width: 1023px)" srcset="img/card4-tablet@1x.jpg 1x, img/card4-tablet@2x.jpg 2x">
                       <!-- 1х: 270px; 2x: 540px --> <img src="img/card4-desktop@1x.jpg" srcset="img/card4-desktop@2x.jpg 2x" alt="Blue gemstone pendant" width="270" height="272">
                     </picture>
-                  </div>
+
                   <p>Blue gemstone pendant</p>
                   <span>$ 105</span>
+                </div>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="product.html">
                   <div class="catalog__img">
                     <picture>
                       <!-- 1х: 130px; 2x: 260px -->
@@ -324,13 +307,14 @@
                       <source media="(max-width: 1023px)" srcset="img/card5-tablet@1x.jpg 1x, img/card5-tablet@2x.jpg 2x">
                       <!-- 1х: 270px; 2x: 540px --> <img src="img/card5-desktop@1x.jpg" srcset="img/card5-desktop@2x.jpg 2x" alt="Boho earrings" width="270" height="272">
                     </picture>
-                  </div>
+
                   <p>Boho earrings</p>
                   <span>$ 75</span>
+                </div>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="product.html">
                   <div class="catalog__img">
                     <picture>
                       <!-- 1х: 130px; 2x: 260px -->
@@ -345,13 +329,14 @@
                       <source media="(max-width: 1023px)" srcset="img/card6-tablet@1x.jpg 1x, img/card6-tablet@2x.jpg 2x">
                       <!-- 1х: 270px; 2x: 540px --> <img src="img/card6-desktop@1x.jpg" srcset="img/card6-desktop@2x.jpg 2x" alt="Gold bird necklace" width="270" height="272">
                     </picture>
-                  </div>
+
                   <p>Gold bird necklace</p>
                   <span>$ 135</span>
+                </div>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="product.html">
                   <div class="catalog__img">
                     <picture>
                       <!-- 1х: 130px; 2x: 260px -->
@@ -366,13 +351,14 @@
                       <source media="(max-width: 1023px)" srcset="img/card7-tablet@1x.jpg 1x, img/card7-tablet@2x.jpg 2x">
                       <!-- 1х: 270px; 2x: 540px --> <img src="img/card7-desktop@1x.jpg" srcset="img/card7-desktop@2x.jpg 2x" alt="Black leather choker" width="270" height="272">
                     </picture>
-                  </div>
+
                   <p>Black leather choker</p>
                   <span>$ 85</span>
+                </div>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="product.html">
                   <div class="catalog__img">
                     <picture>
                       <!-- 1х: 130px; 2x: 260px -->
@@ -387,13 +373,14 @@
                       <source media="(max-width: 1023px)" srcset="img/card8-tablet@1x.jpg 1x, img/card8-tablet@2x.jpg 2x">
                       <!-- 1х: 270px; 2x: 540px --> <img src="img/card8-desktop@1x.jpg" srcset="img/card8-desktop@2x.jpg 2x" alt="Necklace with amethyst" width="270" height="272">
                     </picture>
-                  </div>
+
                   <p>Necklace with amethyst</p>
                   <span>$ 145</span>
+                </div>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="product.html">
                   <div class="catalog__img">
                     <picture>
                       <!-- 1х: 130px; 2x: 260px -->
@@ -408,13 +395,14 @@
                       <source media="(max-width: 1023px)" srcset="img/card9-tablet@1x.jpg 1x, img/card9-tablet@2x.jpg 2x">
                       <!-- 1х: 270px; 2x: 540px --> <img src="img/card9-desktop@1x.jpg" srcset="img/card9-desktop@2x.jpg 2x" alt="Elephant earrings" width="270" height="272">
                     </picture>
-                  </div>
+
                   <p>Elephant earrings</p>
                   <span>$ 95</span>
+                </div>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="product.html">
                   <div class="catalog__img">
                     <picture>
                       <!-- 1х: 130px; 2x: 260px -->
@@ -429,13 +417,14 @@
                       <source media="(max-width: 1023px)" srcset="img/card10-tablet@1x.jpg 1x, img/card10-tablet@2x.jpg 2x">
                       <!-- 1х: 270px; 2x: 540px --> <img src="img/card10-desktop@1x.jpg" srcset="img/card10-desktop@2x.jpg 2x" alt="Threader necklace" width="270" height="272">
                     </picture>
-                  </div>
+
                   <p>Threader necklace</p>
                   <span>$ 115</span>
+                </div>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="product.html">
                   <div class="catalog__img">
                     <picture>
                       <!-- 1х: 130px; 2x: 260px -->
@@ -450,13 +439,14 @@
                       <source media="(max-width: 1023px)" srcset="img/card11-tablet@1x.jpg 1x, img/card11-tablet@2x.jpg 2x">
                       <!-- 1х: 270px; 2x: 540px --> <img src="img/card11-desktop@1x.jpg" srcset="img/card11-desktop@2x.jpg 2x" alt="Origami crane necklace" width="270" height="272">
                     </picture>
-                  </div>
+
                   <p>Origami crane necklace</p>
                   <span>$ 105</span>
+                </div>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="product.html">
                   <div class="catalog__img">
                     <picture>
                       <!-- 1х: 130px; 2x: 260px -->
@@ -471,18 +461,39 @@
                       <source media="(max-width: 1023px)" srcset="img/card12-tablet@1x.jpg 1x, img/card12-tablet@2x.jpg 2x">
                       <!-- 1х: 270px; 2x: 540px --> <img src="img/card12-desktop@1x.jpg" srcset="img/card12-desktop@2x.jpg 2x" alt="Marble earrings" width="270" height="272">
                     </picture>
-                  </div>
+
                   <p>Marble earrings</p>
                   <span>$ 95</span>
+                </div>
                 </a>
               </li>
             </ul>
           </div>
-          <button type="button">Previous</button>
-          <div class="new__pagination">
-            <span class="visually-hidden">Pagination</span>
-          </div>
-          <button type="button">Next sliders</button>
+
+          <!-- Нумерация -->
+
+      <div class="catalog__pagination pagination">
+        <button class="pagination__btn" type="button">Previous</button>
+        <ul>
+          <li>
+            <a class="pagination__link pagination__link--active" href="#">1</a>
+          </li>
+          <li>
+            <a class="pagination__link" href="#">2</a>
+          </li>
+          <li>
+            <a class="pagination__link" href="#">3</a>
+          </li>
+          <li>
+            <a class="pagination__link" href="#">4</a>
+          </li>
+          <li>
+            <a class="pagination__link" href="#">5</a>
+          </li>
+        </ul>
+        <button class="pagination__btn" type="button">Next</button>
+      </div>
+    </div>
 
         </div>
       </section>
@@ -494,18 +505,22 @@
       <div class="footer__container container">
         <div class="footer__first-part">
           <p>The good stuff in your inbox </p>
-          <span>News and updates from CH. No spam, we promise.</span>
+          <span class="footer__promise">News and updates from CH. No spam, we promise.</span>
           <form action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data">
+            <div class="footer__inner">
             <div class="footer__email">
               <input type="email" name="email" id="email" placeholder="Your E-mail" required="">
               <label class="visually-hidden" for="email">Your E-mail</label>
             </div>
             <div class="footer__submit">
-              <button type="submit">Sign Up</button>
+              <button type="submit">
+               <span>Sign Up</span>
               <svg width="29" height="9">
                 <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
               </svg>
+            </button>
             </div>
+          </div>
           </form>
         </div>
         <div class="footer__second-part">
@@ -537,43 +552,78 @@
               <a href="#">Contact Us</a>
             </li>
           </ul>
+        </div>
+        <div class="footer__social social">
           <ul>
             <li>
               <a href="https://facebook.com" aria-label="Facebook" target="_blank">
-                <span>Facebook</span>
                 <svg width="8" height="15">
                   <use xlink:href="img/sprite_auto.svg#icon-facebook"></use>
                 </svg>
+                <span>Facebook</span>
               </a>
             </li>
             <li>
               <a href="https://instagram.com" aria-label="Instagram" target="_blank">
-                <span>Instagram</span>
                 <svg width="15" height="15">
                   <use xlink:href="img/sprite_auto.svg#icon-instagram"></use>
                 </svg>
+                <span>Instagram</span>
               </a>
             </li>
             <li>
               <a href="https://pinterest.com" aria-label="Pinterest" target="_blank">
-                <span>Pinterest</span>
                 <svg width="15" height="15">
                   <use xlink:href="img/sprite_auto.svg#icon-pinterest"></use>
                 </svg>
+                <span>Pinterest</span>
               </a>
             </li>
             <li>
               <a href="https://twitter.com" aria-label="Twitter" target="_blank">
-                <span>Twitter</span>
                 <svg width="15" height="13">
                   <use xlink:href="img/sprite_auto.svg#icon-twitter"></use>
                 </svg>
+                <span>Twitter</span>
               </a>
             </li>
           </ul>
         </div>
       </div>
     </footer>
+
+    <div class="modal modal--login">
+      <div class="modal__content modal__content--login login">
+      <div class="login__wrap">
+        <button class="login__close" type="button">
+          <span class="visually-hidden">Close</span>
+            <svg width="14" height="14">
+              <use xlink:href="img/sprite_auto.svg#icon-close-login"></use>
+            </svg>
+        </button>
+        <p class="login__title">Log In</p>
+        <form action="https://echo.htmlacademy.ru" method="POST" enctype="multipart/form-data">
+            <div class="login__inner login__inner--email">
+              <input type="email" name="login-email" id="login-email" placeholder="Your E-mail" required="">
+              <label class="visually-hidden" for="login-email">Your E-mail</label>
+            </div>
+            <div class="login__inner">
+               <input type="password" name="login-password" id="login-password" placeholder="Password" required="">
+              <label class="visually-hidden">Your password</label>
+            </div>
+
+          <div class="login__forgot">
+            <a href="#">Forgot your password?</a>
+          </div>
+            <button class="login__btn" type="submit">Log In</button>
+            <p class="login__text">Don’t have an account? <a href="#">Sign up</a></p>
+        </form>
+      </div>
+    </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  <script src="js/vendor.js"></script>
 
   </body>
 

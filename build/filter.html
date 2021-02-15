@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Jewellery">
+  <title>Jewellery</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <main class="class=" main-page"="">
+    <h1 class="visually-hidden">Filter</h1>
+    <section class="filter"></section>
+    <h2 class="visually-hidden">Filter form</h2>
+
+    <form class="filter__form filter__form--nojs" action="https://echo.htmlacademy.ru" method="POST" enctype="multipart/form-data">
+
+      <button class="filter__close" type="button">
+        <span class="visually-hidden">Close filter</span>
+        <svg width="32" height="32">
+          <use xlink:href="img/sprite_auto.svg#icon-close-filter"></use>
+        </svg>
+      </button>
+
+      <fieldset class="filter__item filter__item--open">
+          <button class="filter__group" type="button">Product</button>
+          <ul class="filter__list">
+            <li>
+              <input class="visually-hidden" type="checkbox" name="necklaces" id="necklaces" checked="">
+              <label for="necklaces">Necklaces</label>
+            </li>
+            <li>
+              <input class="visually-hidden" type="checkbox" name="chokers" id="chokers" checked="">
+              <label for="chokers">Chokers</label>
+            </li>
+            <li>
+              <input class="visually-hidden" type="checkbox" name="rings" id="rings">
+              <label for="rings">Rings</label>
+            </li>
+            <li>
+              <input class="visually-hidden" type="checkbox" name="earrings" id="earrings" checked="">
+              <label for="earrings">Earrings</label>
+            </li>
+          </ul>
+        </fieldset>
+
+
+        <fieldset class="filter__item">
+          <button class="filter__group" type="button">Material</button>
+          <ul class="filter__list">
+            <li>
+              <input class="visually-hidden" type="checkbox" name="gold" id="gold" checked="">
+              <label for="gold">Gold</label>
+            </li>
+            <li>
+              <input class="visually-hidden" type="checkbox" name="silver" id="silver">
+              <label for="silver">Silver</label>
+            </li>
+          </ul>
+        </fieldset>
+
+
+        <fieldset class="filter__item">
+          <button class="filter__group" type="button">Collection</button>
+          <ul class="filter__list">
+            <li>
+              <input class="visually-hidden" type="checkbox" name="pink-flamingo" id="pink-flamingo" checked="">
+              <label for="pink-flamingo">Pink flamingo</label>
+            </li>
+            <li>
+              <input class="visually-hidden" type="checkbox" name="dreams" id="dreams">
+              <label for="dreams">Dreams</label>
+            </li>
+          </ul>
+        </fieldset>
+
+
+        <fieldset class="filter__item filter__item--open">
+          <button class="filter__group" type="button">Price</button>
+
+          <div class="filter__price price">
+
+            <div class="price__controls">
+              <div class="price__scale">
+                <div class="price__bar"></div>
+              </div>
+              <div class="price__toggle price__toggle-min"></div>
+              <div class="price__toggle price__toggle-max"></div>
+            </div>
+
+            <div class="price__range">
+              <label class="price__min-price" for="min-price">$
+                <input name="min-price" type="number" id="min-price" value="55">
+              </label>
+              <label class="price__max-price" for="max-price">$
+                <input name="max-price" type="number" id="max-price" value="155">
+              </label>
+            </div>
+
+          </div>
+      </fieldset>
+      <button class="filter__btn " type="submit">Apply</button>
+      <button class="filter__btn filter__btn--clear" type="reset">Clear All</button>
+    </form>
+  
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/vendor.js"></script>
+
+</body>
+
+</html>

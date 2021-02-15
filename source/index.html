@@ -8,41 +8,58 @@
   <title>Jewellery</title>
   <meta name="Description" content="Jewellery">
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/CormorantGaramond-Bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/CormorantGaramond-MediumItalic.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/CormorantGaramond-RegularItalic.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/CormorantGaramond-SemiBold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Poppins-Medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Poppins-Regular.woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body>
-  <header class="header">
+  <header class="header header--opened header--nojs">
     <div class="header__container container">
-      <nav>
-
-      <button type="button">
-        <span class="visually-hidden">Open menu</span>
-        <svg class="main-menu-toggle__svg-icon" width="25" height="16">
+      <button class="header__toggle toggle" type="button">
+        <svg width="25" height="19">
           <use xlink:href="img/sprite_auto.svg#icon-toggle"></use>
         </svg>
       </button>
 
       <div class="header__search search">
         <form action="https://echo.htmlacademy.ru" method="POST" enctype="multipart/form-data">
+          <div class="search__inner">
           <input type="search" name="search" id="search" placeholder="Type here to search" required>
           <label for="search">
-            <span class="visually-hidden">Search</span>
-          </label>
-          <span>
-            <svg width="14" height="14">
+            <svg width="15" height="15">
               <use xlink:href="img/sprite_auto.svg#icon-search"></use>
             </svg>
-          </span>
-          <button class="visually-hidden" type="submit">Search</button>
+          </label>
+        </div>
+
         </form>
       </div>
 
       <div class="header__logo">
-        <a href="#">
-          <img src="img/sprite_auto.svg#icon-logo" width="66" height="66" alt="Logo">
+        <a href="#" aria-label="Logo">
+          <svg width="66" height="66">
+            <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
+          </svg>
         </a>
       </div>
-      <ul>
+
+      <button class="header__header-login header-login" type="button">Login</button>
+
+      <div class="header__header-cart header-cart">
+        <a href="#" aria-label="User cart">
+          <span>Cart 0</span>
+          <svg width="20" height="18">
+            <use xlink:href="img/sprite_auto.svg#icon-cart"></use>
+          </svg>
+        </a>
+      </div>
+
+      <nav class="header__nav nav">
+      <ul class="nav__site-menu">
         <li>
           <a href="#">What’s new</a>
         </li>
@@ -60,7 +77,7 @@
         </li>
       </ul>
 
-      <ul>
+      <ul class="nav__site-menu nav__site-menu--about-us">
         <li>
           <a href="#">About CH</a>
         </li>
@@ -71,61 +88,28 @@
           <a href="#">Contact Us</a>
         </li>
       </ul>
-      <button type="button">Login</button>
-      <div>
-        <a href="#" aria-label="User cart">
-          <span>Cart 0</span>
-          <svg width="18" height="16">
-            <use xlink:href="img/sprite_auto.svg#icon-cart"></use>
-          </svg>
-        </a>
-      </div>
     </nav>
     </div>
-
-    <div class="header__popup popup">
-      <div class="popup__wrap">
-        <button class="popup__close" type="button">
-          <span class="visually-hidden">Close</span>
-            <svg width="14" height="14">
-              <use xlink:href="img/sprite_auto.svg#icon-close-popup"></use>
-            </svg>
-        </button>
-        <p>Log In</p>
-        <form action="https://echo.htmlacademy.ru" method="POST" enctype="multipart/form-data">
-            <div class="popup__inner">
-              <input type="email" name="popup-email" id="popup-email" placeholder="Your E-mail" required>
-              <label class="visually-hidden" for="popup-email">Your E-mail</label>
-            </div>
-            <div class="popup__inner">
-               <input type="password" name="popup-password" id="popup-password" placeholder="Password" required>
-              <label class="visually-hidden">Your password</label>
-            </div>
-          </div>
-          <div class="popup__forgot">
-            <a href="#">Forgot your password?</a>
-          </div>
-            <button type="submit">Log In</button>
-            <p>Don’t have an account?<a href="#">Sign up</a></p>
-        </form>
-      </div>
-    </div>
-
   </header>
 
-  <main>
+  <main class="main-page">
+    <h1 class="visually-hidden">Chjewellery</h1>
     <section class="promo">
-      <h1 class="visually-hidden">Chjewellery</h1>
-      <p><span>Perfection</span>made to be yours</p>
+      <div class="promo__container container">
+      <h2>Perfection</h2>
+      <p>made to be yours</p>
+    </div>
     </section>
 
     <section class="new">
       <div class="new__container container">
         <h2>New In</h2>
-        <a href="catalog.html">Shop Now</a>
-        <ul>
+        <a class="new__link" href="catalog.html">Shop Now</a>
+        <div class="swiper-container new__swiper">
+        <ul class="swiper-wrapper new__list">
           <!-- 1 -->
-          <li>
+          <li class="swiper-slide new__item">
+            <a class="new__link-product" href="#">
             <div class="new__wrap">
               <picture>
                 <!-- 1х: 130px; 2x: 260px -->
@@ -149,8 +133,10 @@
               <p>Necklace with amethyst</p>
               <span>$ 145</span>
             </div>
+          </a>
           </li>
-          <li>
+          <li class="swiper-slide new__item">
+            <a class="new__link-product" href="#">
             <div class="new__wrap">
               <picture>
                 <!-- 1х: 130px; 2x: 260px -->
@@ -171,10 +157,12 @@
                   srcset="img/new-item2-desktop@2x.jpg 2x" loading="lazy" width="270" height="284" alt="Layered сhoker">
               </picture>
               <p>Layered сhoker</p>
-              <span>$ 115</span>
+              <span> $ 115</span>
             </div>
+          </a>
           </li>
-          <li>
+          <li class="swiper-slide new__item">
+            <a class="new__link-product" href="#">
             <div class="new__wrap">
               <picture>
                 <!-- 1х: 130px; 2x: 260px -->
@@ -197,8 +185,10 @@
               <p>Gold chain</p>
               <span>$ 215</span>
             </div>
+          </a>
           </li>
-          <li>
+          <li class="swiper-slide new__item">
+            <a class="new__link-product" href="#">
             <div class="new__wrap">
               <picture>
                 <!-- 1х: 130px; 2x: 260px -->
@@ -222,9 +212,11 @@
               <p>Galaxy earrings</p>
               <span>$ 95</span>
             </div>
+          </a>
           </li>
           <!-- 2 -->
-          <li>
+          <li class="swiper-slide new__item">
+            <a class="new__link-product" href="#">
             <div class="new__wrap">
               <picture>
                 <!-- 1х: 130px; 2x: 260px -->
@@ -248,8 +240,10 @@
               <p>Necklace with amethyst</p>
               <span>$ 145</span>
             </div>
+          </a>
           </li>
-          <li>
+          <li class="swiper-slide new__item">
+            <a class="new__link-product" href="#">
             <div class="new__wrap">
               <picture>
                 <!-- 1х: 130px; 2x: 260px -->
@@ -272,8 +266,10 @@
               <p>Layered сhoker</p>
               <span>$ 115</span>
             </div>
+          </a>
           </li>
-          <li>
+          <li class="swiper-slide new__item">
+            <a class="new__link-product" href="#">
             <div class="new__wrap">
               <picture>
                 <!-- 1х: 130px; 2x: 260px -->
@@ -296,8 +292,10 @@
               <p>Gold chain</p>
               <span>$ 215</span>
             </div>
+          </a>
           </li>
-          <li>
+          <li class="swiper-slide new__item">
+            <a class="new__link-product" href="#">
             <div class="new__wrap">
               <picture>
                 <!-- 1х: 130px; 2x: 260px -->
@@ -321,9 +319,11 @@
               <p>Galaxy earrings</p>
               <span>$ 95</span>
             </div>
+          </a>
           </li>
           <!-- 3 -->
-          <li>
+          <li class="swiper-slide new__item">
+            <a class="new__link-product" href="#">
             <div class="new__wrap">
               <picture>
                 <!-- 1х: 130px; 2x: 260px -->
@@ -347,8 +347,10 @@
               <p>Necklace with amethyst</p>
               <span>$ 145</span>
             </div>
+          </a>
           </li>
-          <li>
+          <li class="swiper-slide new__item">
+            <a class="new__link-product" href="#">
             <div class="new__wrap">
               <picture>
                 <!-- 1х: 130px; 2x: 260px -->
@@ -371,8 +373,10 @@
               <p>Layered сhoker</p>
               <span>$ 115</span>
             </div>
+          </a>
           </li>
-          <li>
+          <li class="swiper-slide new__item">
+            <a class="new__link-product" href="#">
             <div class="new__wrap">
               <picture>
                 <!-- 1х: 130px; 2x: 260px -->
@@ -395,8 +399,10 @@
               <p>Gold chain</p>
               <span>$ 215</span>
             </div>
+          </a>
           </li>
-          <li>
+          <li class="swiper-slide new__item">
+            <a class="new__link-product" href="#">
             <div class="new__wrap">
               <picture>
                 <!-- 1х: 130px; 2x: 260px -->
@@ -420,16 +426,24 @@
               <p>Galaxy earrings</p>
               <span>$ 95</span>
             </div>
+          </a>
           </li>
         </ul>
-        <button type="button">
+      </div>
+        <button class="new__btn new__prev-btn" type="button">
           <span class="visually-hidden">Previous sliders</span>
+          <svg width="29" height="9">
+            <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
+          </svg>
         </button>
         <div class="new__pagination">
           <span class="visually-hidden">Pagination</span>
         </div>
-        <button type="button">
+        <button class="new__btn new__next-btn" type="button">
           <span class="visually-hidden">Next sliders</span>
+          <svg width="29" height="9">
+            <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
+          </svg>
         </button>
       </div>
     </section>
@@ -437,14 +451,9 @@
     <section class="blog">
       <div class="blog__container container">
         <h2>Blog</h2>
-        <a href="#">Read All</a>
+        <a class="blog__link-all" href="#">Read All</a>
         <ul>
           <li>
-            <div class="blog__text">
-              <span>September 30, 2019</span>
-              <h3>How to care for your jewellery</h2>
-                <a href="#">Read Article</a>
-            </div>
             <div class="blog__img">
               <picture>
                 <!-- 1х: 290px; 2x: 580px -->
@@ -463,13 +472,13 @@
                   loading="lazy" width="285" height="300" alt="Jewellery">
               </picture>
             </div>
-          </li>
-          <li>
             <div class="blog__text">
-              <span>September 23, 2019</span>
-              <h3>Power of crystals</h2>
+              <span>September 30, 2019</span>
+              <h3>How to care for your jewellery</h3>
                 <a href="#">Read Article</a>
             </div>
+          </li>
+          <li>
             <div class="blog__img">
               <picture>
                 <!-- 1х: 290px; 2x: 580px -->
@@ -488,13 +497,13 @@
                   loading="lazy" width="285" height="300" alt="Jewellery">
               </picture>
             </div>
-          </li>
-          <li>
             <div class="blog__text">
-              <span>September 16, 2019</span>
-              <h3>AW 19 trends</h2>
+              <span>September 23, 2019</span>
+              <h3>Power of crystals</h3>
                 <a href="#">Read Article</a>
             </div>
+          </li>
+          <li>
             <div class="blog__img">
               <picture>
                 <!-- 1х: 290px; 2x: 580px -->
@@ -513,6 +522,11 @@
                   loading="lazy" width="570" height="630" alt="Jewellery">
               </picture>
             </div>
+            <div class="blog__text">
+              <span>September 16, 2019</span>
+              <h3>AW 19 trends</h3>
+                <a href="#">Read Article</a>
+            </div>
           </li>
         </ul>
       </div>
@@ -521,24 +535,24 @@
     <section class="faq">
       <div class="faq__container container">
         <h2>Frequently asked questions</h2>
-        <ul>
-          <li>
-            <button type="button">What materials are the jewellery made of?</button>
+        <ul class="faq__list faq__list--nojs">
+          <li class="faq__item faq__item--show">
+            <button class="faq__btn" type="button">What materials are the jewellery made of?</button>
             <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious
               and semiprecious stones and crystals.</p>
           </li>
-          <li>
-            <button type="button">Which countries do you deliver to?</button>
+          <li class="faq__item">
+            <button class="faq__btn" type="button">Which countries do you deliver to?</button>
             <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious
               and semiprecious stones and crystals.</p>
           </li>
-          <li>
-            <button type="button">What are the payment methods?</button>
+          <li class="faq__item">
+            <button class="faq__btn" type="button">What are the payment methods?</button>
             <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious
               and semiprecious stones and crystals.</p>
           </li>
-          <li>
-            <button type="button">Can I return the jewellery if it didn’t fit me?</button>
+          <li class="faq__item">
+            <button class="faq__btn" type="button">Can I return the jewellery if it didn’t fit me?</button>
             <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious
               and semiprecious stones and crystals.</p>
           </li>
@@ -549,10 +563,11 @@
 
     <section class="ch">
       <div class="ch__container container">
-        <h2>@ Chjewellery</h2>
-        <a href="#">Follow Us</a>
-        <div class="ch__layer">
-          <div class="ch__item">
+        <h2><span>@</span>Chjewellery</h2>
+        <a class="ch__link" href="#">Follow Us</a>
+        <ul class="ch__layer">
+          <li class="ch__item">
+            <div class="ch__img">
             <picture>
               <!-- 1х: 130px; 2x: 260px -->
               <source media="(max-width: 767px)"
@@ -573,7 +588,9 @@
                 srcset="img/chjewellery1-desktop@2x.jpg 2x" loading="lazy" width="230" height="230" alt="Earrings">
             </picture>
           </div>
-          <div class="ch__item">
+          </li>
+          <li class="ch__item">
+            <div class="ch__img">
             <picture>
               <!-- 1х: 130px; 2x: 260px -->
               <source media="(max-width: 767px)"
@@ -594,7 +611,9 @@
                 srcset="img/chjewellery2-desktop@2x.jpg 2x" loading="lazy" width="230" height="154" alt="Earrings">
             </picture>
           </div>
-          <div class="ch__item">
+          </li>
+          <li class="ch__item">
+            <div class="ch__img">
             <picture>
               <!-- 1х: 145px; 2x: 290px -->
               <source media="(max-width: 767px)"
@@ -616,7 +635,9 @@
                 alt="Girl with earrings">
             </picture>
           </div>
-          <div class="ch__item">
+          </li>
+          <li class="ch__item">
+            <div class="ch__img">
             <picture>
               <!-- 1х: 145px; 2x: 290px -->
               <source media="(max-width: 767px)"
@@ -638,7 +659,9 @@
                 alt="Ring and chain">
             </picture>
           </div>
-          <div class="ch__item">
+          </li>
+          <li class="ch__item">
+            <div class="ch__img">
             <picture>
               <!-- 1х: 130px; 2x: 260px -->
               <source media="(max-width: 767px)"
@@ -659,7 +682,9 @@
                 srcset="img/chjewellery5-desktop@2x.jpg 2x" loading="lazy" width="218" height="191" alt="Earrings">
             </picture>
           </div>
-          <div class="ch__item">
+          </li>
+          <li class="ch__item ch__item--mr">
+            <div class="ch__img">
             <picture>
               <!-- 1х: 126x; 2x: 252px -->
               <source media="(max-width: 1023px)"
@@ -674,7 +699,9 @@
                 srcset="img/chjewellery6-desktop@2x.jpg 2x" loading="lazy" width="218" height="218" alt="Earrings">
             </picture>
           </div>
-          <div class="ch__item">
+          </li>
+          <li class="ch__item">
+            <div class="ch__img">
             <picture>
               <!-- 1х: 134x; 2x: 268px -->
               <source media="(max-width: 1023px)"
@@ -689,7 +716,9 @@
                 srcset="img/chjewellery7-desktop@2x.jpg 2x" loading="lazy" width="232" height="166" alt="Rings">
             </picture>
           </div>
-        </div>
+          </li>
+        </ul>
+      </div>
     </section>
   </main>
 
@@ -697,18 +726,22 @@
     <div class="footer__container container">
       <div class="footer__first-part">
         <p>The good stuff in your inbox </p>
-        <span>News and updates from CH. No spam, we promise.</span>
+        <span class="footer__promise">News and updates from CH. No spam, we promise.</span>
         <form action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data">
+          <div class="footer__inner">
           <div class="footer__email">
             <input type="email" name="email" id="email" placeholder="Your E-mail" required>
             <label class="visually-hidden" for="email">Your E-mail</label>
           </div>
           <div class="footer__submit">
-            <button type="submit">Sign Up</button>
+            <button type="submit">
+             <span>Sign Up</span>
             <svg width="29" height="9">
               <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
             </svg>
+          </button>
           </div>
+        </div>
         </form>
       </div>
       <div class="footer__second-part">
@@ -740,43 +773,78 @@
             <a href="#">Contact Us</a>
           </li>
         </ul>
+      </div>
+      <div class="footer__social social">
         <ul>
           <li>
             <a href="https://facebook.com" aria-label="Facebook" target="_blank">
-              <span>Facebook</span>
               <svg width="8" height="15">
                 <use xlink:href="img/sprite_auto.svg#icon-facebook"></use>
               </svg>
+              <span>Facebook</span>
             </a>
           </li>
           <li>
             <a href="https://instagram.com" aria-label="Instagram" target="_blank">
-              <span>Instagram</span>
               <svg width="15" height="15">
                 <use xlink:href="img/sprite_auto.svg#icon-instagram"></use>
               </svg>
+              <span>Instagram</span>
             </a>
           </li>
           <li>
             <a href="https://pinterest.com" aria-label="Pinterest" target="_blank">
-              <span>Pinterest</span>
               <svg width="15" height="15">
                 <use xlink:href="img/sprite_auto.svg#icon-pinterest"></use>
               </svg>
+              <span>Pinterest</span>
             </a>
           </li>
           <li>
             <a href="https://twitter.com" aria-label="Twitter" target="_blank">
-              <span>Twitter</span>
               <svg width="15" height="13">
                 <use xlink:href="img/sprite_auto.svg#icon-twitter"></use>
               </svg>
+              <span>Twitter</span>
             </a>
           </li>
         </ul>
       </div>
     </div>
   </footer>
+
+  <div class="modal modal--login">
+    <div class="modal__content modal__content--login login">
+    <div class="login__wrap">
+      <button class="login__close" type="button">
+        <span class="visually-hidden">Close</span>
+          <svg width="14" height="14">
+            <use xlink:href="img/sprite_auto.svg#icon-close-modal"></use>
+          </svg>
+      </button>
+      <p class="login__title">Log In</p>
+      <form action="https://echo.htmlacademy.ru" method="POST" enctype="multipart/form-data">
+          <div class="login__inner login__inner--email">
+            <input type="email" name="login-email" id="login-email" placeholder="Your E-mail" required>
+            <label class="visually-hidden" for="login-email">Your E-mail</label>
+          </div>
+          <div class="login__inner">
+             <input type="password" name="login-password" id="login-password" placeholder="Password" required>
+            <label class="visually-hidden">Your password</label>
+          </div>
+
+        <div class="login__forgot">
+          <a href="#">Forgot your password?</a>
+        </div>
+          <button class="login__btn" type="submit">Log In</button>
+          <p class="login__text">Don’t have an account? <a href="#">Sign up</a></p>
+      </form>
+    </div>
+  </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/vendor.js"></script>
 
 </body>
 
