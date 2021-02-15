@@ -1,0 +1,43 @@
+.social {
+  display: flex;
+  margin-top: 7px;
+
+  // @media (max-width: $breakpoint-tablet) {
+  // }
+
+  // @media (max-width: $breakpoint-mobile) {
+  // }
+}
+
+.social ul {
+  @include no-list;
+  display: flex;
+  align-content: flex-end;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 115px;
+  margin-left: 30px;
+}
+
+.social li {
+  display: flex;
+  margin-bottom: 21px;
+}
+
+.social a {
+  position: relative;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+}
+
+.social svg {
+  position: absolute;
+  top: 3px;
+  left: -28px;
+}

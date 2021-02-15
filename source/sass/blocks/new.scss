@@ -1,0 +1,179 @@
+.new__container {
+  position: relative;
+  // margin-top: 100px;
+  margin-bottom: 115px;
+  min-width: 0;
+
+  &--product {
+    margin-top: 86px;
+  }
+}
+
+.new h2 {
+  @include font-source(34px, bold, 44px, $main-black);
+  @include clear(23px);
+  text-align: center;
+}
+
+.new__link {
+  margin: 0 auto;
+  margin-bottom: 59px;
+  display: block;
+  width: 81px;
+  color: $main-black;
+  text-align: center;
+  border-bottom: 1px solid $brown;
+}
+
+.new__swiper {
+  width: 1170px;
+  height: 600px;
+  margin-bottom: 51px;
+}
+
+.new__list {
+  @include no-list;
+  display: flex;
+}
+
+.new__item {
+  display: flex;
+  flex-direction: column;
+  width: 23%;
+  height: 100%;
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.new__wrap img {
+  width: 100%;
+  height: auto;
+
+  @media (max-width: $breakpoint-tablet) {
+    width: 324px;
+    height: 340px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    width: 130px;
+    height: 136px;
+  }
+}
+
+.new__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new p {
+  margin-top: 17px;
+  margin-bottom: 6px;
+}
+
+.new span {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 18px;
+}
+
+.new__link-product {
+  color: $main-black;
+  border: 1px solid transparent;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $brown;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+// Previous
+
+.new__btn {
+  position: absolute;
+  top: 39px;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover svg,
+  &:focus svg {
+    transform: scale(1.1);
+  }
+
+  &:active svg {
+    color: $main-black;
+  }
+}
+
+.new__prev-btn {
+  left: 13px;
+}
+
+.new__next-btn {
+  right: 14px;
+}
+
+.new__btn svg {
+  width: 29px;
+  height: 9px;
+  color: $brown;
+}
+
+.new__next-btn svg,
+.new__next-btn:hover svg,
+.new__next-btn:focus svg,
+.new__next-btn:active svg {
+  transform: rotate(180deg);
+}
+
+// Pagination
+
+.new__pagination {
+  text-align: center;
+}
+
+.new__pagination .swiper-pagination-bullet {
+  font-family: "Poppins", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  color: $grey;
+  border: none;
+  padding: 0;
+  opacity: 1;
+  background-color: transparent;
+  cursor: pointer;
+  margin-right: 2px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover,
+  &:focus {
+    color: $brown;
+  }
+
+  &:active {
+    color: $main-black;
+  }
+}
+
+.new__pagination .swiper-pagination-bullet-active {
+  color: $main-black;
+  background: transparent;
+}

@@ -1,0 +1,93 @@
+.price {
+  padding: 0 0 18px 27px;
+}
+
+.price__controls {
+  position: relative;
+  margin-bottom: 11px;
+}
+
+.price__scale {
+  // position: relative;
+  width: 200px;
+  height: 1px;
+  background-color: $beige;
+}
+
+.price__bar {
+  margin-left: 50px;
+  width: 49%;
+  height: 1px;
+  background-color: $brown;
+}
+
+.price__toggle {
+  position: absolute;
+  top: -8px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid $brown;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border-color: red;
+  }
+
+  // &:active {
+  //   box-shadow: 0 2px 2px 0 #cfcfcf;
+  // }
+}
+
+.price__toggle-min {
+  left: 34px;
+}
+
+.price__toggle-max {
+  left: 140px;
+}
+
+.price__range {
+  // font-size: 0;
+  margin-left: 24px;
+}
+
+.price__range label {
+  @include main-font-source(14px, 500, 18px, $main-black);
+}
+
+.price__range input {
+  width: 37px;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+.price__min-price {
+  margin-right: 50px;
+}
+
+@media (max-width: 1090px) {
+  .price__bar {
+    margin-left: 30px;
+  }
+
+  .price__toggle-min {
+    left: 30px;
+  }
+
+  .price__toggle-max {
+    left: 120px;
+  }
+
+  .price__range {
+    margin-left: 20px;
+  }
+
+  .price__min-price {
+    margin-right: 30px;
+  }
+}

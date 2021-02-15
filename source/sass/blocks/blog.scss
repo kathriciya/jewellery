@@ -1,0 +1,123 @@
+.blog__container {
+  margin-bottom: 89px;
+}
+
+.blog h2 {
+  @include font-source(34px, bold, 44px, $main-black);
+  @include clear(18px);
+  text-align: center;
+}
+
+.blog__link-all {
+  margin: 0 auto;
+  margin-bottom: 60px;
+  display: block;
+  width: 66px;
+  color: $main-black;
+  text-align: center;
+  padding-bottom: 5px;
+  border-bottom: 1px solid $brown;
+}
+
+.blog ul {
+  @include no-list;
+  display: flex;
+  flex-flow: column wrap;
+  align-content: space-between;
+  align-items: center;
+  padding: 0;
+  // width: 48%;
+  max-height: 700px;
+}
+
+.blog li {
+  display: flex;
+  flex: 1 1 auto;
+  width: 48.7%;
+  height: auto;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+// .blog li:last-child {
+//   width: 49%;
+// }
+
+.blog__text {
+  flex-shrink: 0;
+  width: 285px;
+  max-height: 300px;
+  padding-top: 64px;
+  padding-right: 51px;
+  padding-bottom: 62px;
+  padding-left: 52px;
+  background-color: $beige;
+}
+
+.blog li:nth-child(2n) .blog__text {
+  padding-right: 58px;
+  padding-left: 55px;
+}
+
+.blog__text span {
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  color: $grey;
+  margin-bottom: 16px;
+}
+
+.blog__text h3 {
+  @include font-source(26px, 600, 34px, $black);
+  margin: 0;
+  margin-bottom: 37px;
+}
+
+.blog__text a {
+  color: $main-black;
+  padding-bottom: 5px;
+  border-bottom: 1px solid $brown;
+}
+
+.blog__img img {
+  width: 285px;
+  height: 300px;
+}
+
+.blog li:nth-child(2n) .blog__img {
+  order: 1;
+}
+
+.blog li:last-child {
+  position: relative;
+  min-height: 630px;
+}
+
+.blog li:last-child .blog__img img {
+  width: 570px;
+  height: 630px;
+}
+
+
+.blog li:last-child .blog__text {
+  position: absolute;
+  right: 0;
+  bottom: 3px;
+
+  width: 285px;
+  height: 300px;
+}
+
+// .blog li:last-child .blog__img img {
+//   position: relative;
+//   margin-left: 30px;
+//   min-height: 630px;
+//   width: 570px;
+//   height: 630px;
+// }
+
+// .blog li:last-child + .blog__text {
+//   position: absolute;
+//   top: 331px;
+//   right: 0;
+// }

@@ -1,0 +1,127 @@
+.footer {
+  flex-grow: 0;
+  background-color: $black;
+}
+
+.footer__container {
+  display: flex;
+  // justify-content: space-between;
+  padding-top: 90px;
+  padding-bottom: 72px;
+
+  @media (max-width: $breakpoint-tablet) {
+    // padding-top: 60px;
+    // padding-bottom: 60px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    // padding-top: 60px;
+    // padding-bottom: 60px;
+  }
+}
+
+.footer__first-part {
+  width: 43%;
+  margin-right: 7.5%;
+}
+
+.footer__first-part p {
+  @include font-source(34px, bold, 44px, $white);
+  @include clear(11px);
+  letter-spacing: 0.03em;
+}
+
+.footer__promise {
+  display: block;
+  font-weight: normal;
+  color: $grey;
+  margin-bottom: 27px;
+}
+
+// .footer__email {
+//   width: 400px;
+// }
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  // width: 500px;
+  border-bottom: 1px solid $white;
+}
+
+.footer input {
+  @include main-font-source(14px, 500, 21px, $grey);
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 100%;
+  padding: 14px 18px 11px 0;
+  border: none;
+  background-color: transparent;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    background-color: $white;
+    color: $main-black;
+  }
+}
+
+.footer__submit {
+  display: flex;
+}
+
+.footer button {
+  @include main-font-source(16px, 500, 21px, $grey);
+  display: block;
+  width: 109px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+}
+
+.footer__submit span {
+  color: $white;
+  margin-right: 13px;
+}
+
+.footer__submit svg {
+  color: $white;
+  transform: rotate(180deg);
+}
+
+.footer__second-part {
+  margin-top: 7px;
+  display: flex;
+  // width: 360px;
+  width: 30.5%;
+  justify-content: space-between;
+  margin-right: 7%;
+}
+
+.footer ul {
+  @include no-list;
+}
+
+.footer__second-part ul:first-of-type {
+  margin-right: 15px;
+}
+
+.footer__second-part li {
+  display: flex;
+  margin-bottom: 21px;
+}
+
+.footer a {
+  color: $white;
+}
+
+.footer__social {
+  display: flex;
+}

@@ -1,0 +1,144 @@
+.login__wrap {
+  padding-top: 188px;
+  padding-bottom: 40px;
+  padding-left: 45px;
+  padding-right: 45px;
+  background-color: $beige;
+  background-image: url("../img/bg-popup-desktop@1x.jpeg");
+  background-repeat: no-repeat;
+  background-position: center top;
+
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-popup-desktop@2x.jpeg");
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    background-image: url("../img/bg-popup-tablet@1x.jpg");
+
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-popup-tablet@2x.jpg");
+    }
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    background-image: url("../img/bg-popup-mobile@1x.jpg");
+
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-popup-mobile@2x.jpg");
+    }
+  }
+}
+
+.login__title {
+  @include font-source(34px, bold, 44px, $main-black);
+  @include clear(23px);
+  text-align: center;
+}
+
+.login__text {
+  @include main-font-source(14px, 500, 21px, $grey);
+  text-align: center;
+}
+
+.login__text a {
+  color: $main-black;
+
+  &:hover,
+  &:focus {
+    color: $brown;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.login__btn {
+  @include main-font-source(16px, normal, 21px, $white);
+  width: 100%;
+  min-height: 68px;
+  margin-bottom: 2px;
+  background-color: $brown;
+
+  border: 1px solid $brown;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.3;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.login__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: $main-black;
+  cursor: pointer;
+
+  &:hover svg,
+  &:focus svg {
+    color: $brown;
+  }
+
+  &:active svg {
+    opacity: 0.7;
+  }
+}
+
+.login input {
+  @include main-font-source(14px, normal, 21px, $grey);
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 100%;
+  padding: 9px 0;
+  border: none;
+  border-bottom: 1px solid $main-black;
+  background-color: transparent;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: $brown;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.login__inner {
+  &--email {
+    margin-bottom: 25px;
+  }
+}
+
+.login__forgot {
+  text-align: right;
+  margin-top: 2px;
+  margin-bottom: 45px;
+}
+
+.login__forgot a {
+  @include main-font-source(12px, normal, 18px, $grey);
+  text-align: right;
+
+  &:hover,
+  &:focus {
+    color: $brown;
+  }
+
+  &:focus {
+    opacity: 0.7;
+  }
+}
