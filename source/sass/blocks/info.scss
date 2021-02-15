@@ -1,0 +1,45 @@
+.info {
+  display: flex;
+  justify-content: space-between;
+  width: 62%;
+
+  @media (max-width: $breakpoint-tablet) {
+    width: 65%;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.info ul {
+  @include no-list;
+}
+
+.info ul:first-of-type {
+  margin-right: 15px;
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .info ul {
+    margin-bottom: 20px;
+  }
+}
+
+.info li {
+  display: flex;
+  margin-bottom: 21px;
+}
+
+.info a {
+  color: $white;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+}

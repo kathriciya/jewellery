@@ -1,34 +1,20 @@
 'use strict';
 
 (function () {
-  // var faqList = document.querySelector('faq__list');
+  // var list = document.querySelector('faq__list');
 
-  // if (faqList) {
-  //   faqList.classList.remove('faq__list--nojs');
+  // if (list) {
+  //   list.classList.remove('faq__list--nojs');
 
-  //   var toggleFaqItem = function (item) {
+  //   var toggle = function (item) {
   //     item.classList.toggle('faq__item--show');
   //   };
 
-  //   faqList.addEventListener('click', function (evt) {
-  //     var faqItem = evt.target.closest('li');
-  //     toggleFaqItem(faqItem);
+  //   list.addEventListener('click', function (evt) {
+  //     var item = evt.target.closest('li');
+  //     toggle(item);
   //   });
   // }
-
-  var faqList = document.querySelector('faq__list');
-  var faqToggle = document.querySelectorAll('.faq__item > button');
-
-  if (faqList && faqToggle) {
-
-    faqList.classList.remove('faq__list--nojs');
-
-    for (var i = 0; i < faqToggle.length; i++) {
-      faqToggle[i].addEventListener('click', function (evt) {
-        evt.target.parentNode.classList.toggle('faq__item--show');
-      });
-    }
-  }
 
 })();
 

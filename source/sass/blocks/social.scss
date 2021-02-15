@@ -1,12 +1,11 @@
 .social {
   display: flex;
-  margin-top: 7px;
 
-  // @media (max-width: $breakpoint-tablet) {
-  // }
-
-  // @media (max-width: $breakpoint-mobile) {
-  // }
+  @media (max-width: $breakpoint-mobile) {
+    min-height: 23px;
+    width: 180px;
+    margin-right: auto;
+  }
 }
 
 .social ul {
@@ -17,15 +16,38 @@
   flex-wrap: wrap;
   width: 115px;
   margin-left: 30px;
+
+  @media (max-width: $breakpoint-mobile) {
+    flex-direction: row;
+    margin-left: 0;
+    width: 180px;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .social span {
+    display: none;
+  }
 }
 
 .social li {
   display: flex;
   margin-bottom: 21px;
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-right: 25px;
+    margin-bottom: 10px;
+  }
 }
 
 .social a {
   position: relative;
+  color: $white;
+
+  @media (max-width: $breakpoint-mobile) {
+    width: 20px;
+    height: 21px;
+  }
 
   &:hover {
     opacity: 0.5;
@@ -36,8 +58,36 @@
   }
 }
 
-.social svg {
+.social__icon {
   position: absolute;
   top: 3px;
   left: -28px;
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .social__icon {
+    width: 12px;
+    height: 21px;
+    top: 3px;
+    left: 1px;
+
+    &--inst {
+      width: 20px;
+      height: 21px;
+      left: -3px;
+    }
+
+    &--pintr {
+      width: 20px;
+      height: 21px;
+      left: 4px;
+    }
+
+    &--tw {
+      width: 20px;
+      height: 18px;
+      top: 5px;
+      left: 6px;
+    }
+  }
 }
