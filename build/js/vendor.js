@@ -11185,6 +11185,8 @@ new Swiper('.new__swiper', {
   loop: true,
   breakpoints: {
     320: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
       pagination: {
         el: '.new__pagination',
         clickable: true,
@@ -11199,6 +11201,8 @@ new Swiper('.new__swiper', {
       },
     },
     768: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
       pagination: {
         el: '.new__pagination',
         clickable: true,
