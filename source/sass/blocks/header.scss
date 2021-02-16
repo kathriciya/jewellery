@@ -19,6 +19,10 @@
       left: 0;
       background-color: $light-grey;
     }
+
+    @media (max-width: $breakpoint-tablet) {
+      @include no-outline;
+    }
   }
 
   &--catalog {
@@ -55,6 +59,14 @@
   &--product {
     padding-top: 53px;
     margin-bottom: 80px;
+
+    @media (max-width: $breakpoint-tablet) {
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      margin-bottom: 0;
+    }
   }
 
   &--catalog {

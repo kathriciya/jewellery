@@ -3,16 +3,24 @@
   margin-bottom: 115px;
   min-width: 0;
 
-  &--product {
-    margin-top: 86px;
-  }
-
   @media (max-width: $breakpoint-tablet) {
     margin-bottom: 63px;
   }
 
   @media (max-width: $breakpoint-mobile) {
     margin-bottom: 56px;
+  }
+
+  &--product {
+    margin-bottom: 127px;
+
+    @media (max-width: $breakpoint-tablet) {
+      margin-bottom: 73px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      margin-bottom: 65px;
+    }
   }
 }
 
@@ -227,4 +235,10 @@
 .new__pagination .swiper-pagination-bullet-active {
   color: $main-black;
   background: transparent;
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .new__container--product .new__btn {
+    display: none;
+  }
 }
