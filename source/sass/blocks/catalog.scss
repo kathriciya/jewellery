@@ -7,11 +7,19 @@
     left: 0;
     background-color: $light-grey;
   }
+
+  @media (max-width: $breakpoint-mobile) {
+    @include no-outline;
+  }
 }
 
 .catalog__container {
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: $breakpoint-tablet) {
+    flex-direction: column;
+  }
 }
 
 .catalog__left {
@@ -19,6 +27,10 @@
   flex-direction: column;
   // width: 75%;
   width: 870px;
+
+  @media (max-width: $breakpoint-tablet) {
+    width: 100%;
+  }
 }
 
 .catalog__filter {
@@ -26,29 +38,62 @@
   flex-direction: column;
   width: 250px;
   margin-right: 50px;
+
+  @media (max-width: $breakpoint-tablet) {
+    display: none;
+  }
 }
 
 .catalog__filter-btn {
   display: none;
+
+  @media (max-width: $breakpoint-tablet) {
+    @include main-font-source(16px, normal, 21px, $white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 68px;
+    background-color: $brown;
+    border: 1px solid $brown;
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-bottom: 40px;
+  }
 }
 
 .catalog__cards ul {
   @include no-list;
   display: flex;
   flex-wrap: wrap;
+  // width: 100%;
   width: 100%;
+  justify-content: space-between;
 }
 
 .catalog__cards li {
   display: flex;
   flex-direction: column;
-  width: 270px;
+  width: 31%;
+  max-width: 270px;
   height: auto;
-  margin-right: 30px;
-  margin-bottom: 35px;
+  margin-right: 15px;
+  margin-bottom: 37px;
 
   &:nth-child(3n) {
     margin-right: 0;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-bottom: 35px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    width: 45%;
+    margin-right: 0;
+    margin-bottom: 25px;
   }
 }
 
@@ -59,13 +104,29 @@
 }
 
 .catalog__img img {
-  width: 270px;
-  height: 272px;
+  width: 100%;
+  height: auto;
+
+  @media (max-width: $breakpoint-tablet) {
+    width: 206px;
+    height: 208px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    width: 130px;
+    height: 136px;
+  }
 }
 
 .catalog__cards p {
   margin-top: 15px;
   margin-bottom: 6px;
+
+
+  @media (max-width: $breakpoint-mobile) {
+    text-align: center;
+    margin-top: 10px;
+  }
 }
 
 .catalog__cards span {

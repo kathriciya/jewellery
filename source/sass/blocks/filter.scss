@@ -21,7 +21,7 @@
 
   &:hover,
   &:focus {
-    background-color: $beige;
+    background-color: $light-grey;
   }
 }
 
@@ -113,28 +113,28 @@
 
 // Поведение
 
-.filter__item--open {
-  .filter__list,
-  .filter__price {
-    display: block;
-  }
-
-  .filter__group::before {
-    // top: 38px;
-    transform: rotate(180deg);
-  }
+.filter__item--open .filter__list {
+  display: block;
 }
 
-.filter__form--nojs {
-  .filter__list,
-  .filter__price {
-    display: block;
-  }
-
-  .filter__item {
-    .filter__group::after {
-      top: 38px;
-      transform: rotate(180deg);
-    }
-  }
+.filter__item--open .filter__price {
+  display: block;
 }
+
+.filter__item .filter__group::after {
+  // top: 38px;
+  transform: rotate(180deg);
+}
+
+.filter__item--open .filter__group::before {
+  // top: 38px;
+  transform: rotate(180deg);
+}
+
+
+// .filter__form--nojs {
+//   .filter__list,
+//   .filter__price {
+//     display: block;
+//   }
+
