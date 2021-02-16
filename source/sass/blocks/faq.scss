@@ -1,5 +1,13 @@
 .faq__container {
   margin-bottom: 98px;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-bottom: 63px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-bottom: 49px;
+  }
 }
 
 .faq h2 {
@@ -7,16 +15,24 @@
   @include clear(48px);
   letter-spacing: 0.03em;
   text-align: center;
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-bottom: 27px;
+  }
 }
 
 .faq__list {
   @include no-list;
   padding: 0 100px;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 0;
+  }
 }
 
 .faq__item {
   padding-top: 42px;
-  padding-bottom: 37px;
+  padding-bottom: 41px;
   padding-right: 38px;
   padding-left: 38px;
   border: 1px solid $brown;
@@ -30,6 +46,17 @@
   &:not(:first-child) {
     border-top: none;
   }
+
+  @media (max-width: $breakpoint-tablet) {
+    padding-bottom: 44px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding-top: 14px;
+    padding-bottom: 21px;
+    padding-right: 20px;
+    padding-left: 13px;
+  }
 }
 
 .faq__btn {
@@ -42,14 +69,35 @@
 
   border: none;
   background: transparent;
-  margin-bottom: 8px;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding-left: 10px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 16px;
+    line-height: 22px;
+    padding-right: 32px;
+  }
 
   &::after {
-    @include pseudo(" ", absolute, 17px, 10px);
+    @include pseudo(" ", absolute, 25px, 13px);
     right: 10px;
     top: 10px;
     background-image: url("../img/icon-down.svg");
     background-repeat: no-repeat;
+
+    @media (max-width: $breakpoint-tablet) {
+      right: 12px;
+      top: 5px;
+      background-size: 39px 22px;
+      background-position: 50% 50%;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      right: 0;
+      top: 5px;
+    }
   }
 }
 
@@ -59,12 +107,29 @@
   font-weight: normal;
   width: 60%;
   display: none;
+  margin-top: 8px;
+
+  @media (max-width: $breakpoint-tablet) {
+    width: 100%;
+    margin-top: 23px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 15px;
+    padding-right: 34px;
+  }
 }
 
 .faq__item--show .faq__btn {
   &::after {
     top: 10px;
     transform: rotate(180deg);
+
+    @media (max-width: $breakpoint-tablet) {
+      top: 5px;
+    }
   }
 }
 
