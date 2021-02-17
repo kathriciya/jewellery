@@ -65,4 +65,18 @@
       margin-top: 117px;
     }
   }
+
+  &--filter {
+    @media (max-width: $breakpoint-tablet) {
+      max-width: 426px;
+      margin-top: 27px;
+      margin-left: 0;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      max-width: 272px;
+      margin: 0 auto;
+      margin-top: 75px;
+    }
+  }
 }

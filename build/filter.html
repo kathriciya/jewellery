@@ -8,13 +8,15 @@
   <meta name="Description" content="Jewellery">
   <title>Jewellery</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/Poppins-Medium.woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body>
   <main class="class=" main-page"="">
     <h1 class="visually-hidden">Filter</h1>
-    <section class="filter"></section>
-    <h2 class="visually-hidden">Filter form</h2>
+
+    <div class="modal modal--show modal--filter">
+      <div class="modal__content modal__content--filter filter">
 
     <form class="filter__form filter__form--nojs" action="https://echo.htmlacademy.ru" method="POST" enctype="multipart/form-data">
 
@@ -105,7 +107,9 @@
       <button class="filter__btn " type="submit">Apply</button>
       <button class="filter__btn filter__btn--clear" type="reset">Clear All</button>
     </form>
-  
+  </div>
+</div>
+
   </main>
 
   <script src="js/main.js"></script>

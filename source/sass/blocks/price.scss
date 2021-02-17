@@ -1,5 +1,14 @@
 .price {
   padding: 0 0 18px 27px;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding-bottom: 41px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding-left: 11px;
+    padding-bottom: 32px;
+  }
 }
 
 .price__controls {
@@ -12,6 +21,14 @@
   width: 200px;
   height: 1px;
   background-color: $beige;
+
+  @media (max-width: $breakpoint-tablet) {
+    width: 304px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    width: 250px;
+  }
 }
 
 .price__bar {
@@ -19,6 +36,16 @@
   width: 49%;
   height: 1px;
   background-color: $brown;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-left: 72px;
+    width: 53%;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-left: 53px;
+    width: 53%;
+  }
 }
 
 .price__toggle {
@@ -40,23 +67,57 @@
   &:active {
     opacity: 0.7;
   }
+
+  @media (max-width: $breakpoint-tablet) {
+    border: 10px solid $brown;
+  }
 }
 
 .price__toggle-min {
   left: 41px;
+
+  @media (max-width: $breakpoint-tablet) {
+    left: 53px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    left: 39px;
+  }
 }
 
 .price__toggle-max {
   left: 146px;
+
+  @media (max-width: $breakpoint-tablet) {
+    left: 227px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    left: 178px;
+  }
 }
 
 .price__range {
-  // font-size: 0;
   margin-left: 34px;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-left: 45px;
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-left: 32px;
+  }
 }
 
 .price__range label {
   @include main-font-source(14px, 500, 18px, $main-black);
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 16px;
+    line-height: 21px;
+  }
 }
 
 .price__range input {
@@ -79,26 +140,12 @@
 
 .price__min-price {
   margin-right: 47px;
-}
 
-@media (max-width: $breakpoint-tablet) {
-  .price__bar {
-    margin-left: 30px;
+  @media (max-width: $breakpoint-tablet) {
+    margin-right: 115px;
   }
 
-  .price__toggle-min {
-    left: 30px;
-  }
-
-  .price__toggle-max {
-    left: 120px;
-  }
-
-  .price__range {
-    margin-left: 20px;
-  }
-
-  .price__min-price {
-    margin-right: 30px;
+  @media (max-width: $breakpoint-mobile) {
+    margin-right: 78px;
   }
 }
