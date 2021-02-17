@@ -904,7 +904,7 @@ button.swiper-pagination-bullet {
   font-size: 14px;
   line-height: 21px;
   color: #1d1613;
-  margin-right: 77px;
+  margin-right: 81px;
   border: none;
   background-color: transparent;
   cursor: pointer; }
@@ -1119,12 +1119,18 @@ button.swiper-pagination-bullet {
       background-image: url("../img/bg-popup-desktop@2x.jpeg"); } }
   @media (max-width: 1023px) {
     .login__wrap {
+      padding-left: 50px;
+      padding-right: 51px;
       background-image: url("../img/bg-popup-tablet@1x.jpg"); } }
   @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
     .login__wrap {
       background-image: url("../img/bg-popup-tablet@2x.jpg"); } }
   @media (max-width: 767px) {
     .login__wrap {
+      padding-top: 121px;
+      padding-bottom: 25px;
+      padding-left: 15px;
+      padding-right: 16px;
       background-image: url("../img/bg-popup-mobile@1x.jpg"); } }
   @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
     .login__wrap {
@@ -1140,6 +1146,11 @@ button.swiper-pagination-bullet {
   padding: 0;
   margin-bottom: 23px;
   text-align: center; }
+  @media (max-width: 767px) {
+    .login__title {
+      font-size: 24px;
+      line-height: 31px;
+      margin-bottom: 17px; } }
 
 .login__text {
   font-family: "Poppins", "Arial", sans-serif;
@@ -1187,6 +1198,20 @@ button.swiper-pagination-bullet {
     color: #a87b62; }
   .login__close:active svg {
     opacity: 0.7; }
+  @media (max-width: 767px) {
+    .login__close {
+      top: 15px;
+      right: 15px; } }
+
+@media (max-width: 1023px) {
+  .login__close svg {
+    width: 22px;
+    height: 22px; } }
+
+@media (max-width: 767px) {
+  .login__close svg {
+    width: 14px;
+    height: 14px; } }
 
 .login input {
   font-family: "Poppins", "Arial", sans-serif;
@@ -1210,11 +1235,17 @@ button.swiper-pagination-bullet {
 
 .login__inner--email {
   margin-bottom: 25px; }
+  @media (max-width: 767px) {
+    .login__inner--email {
+      margin-bottom: 20px; } }
 
 .login__forgot {
   text-align: right;
   margin-top: 2px;
   margin-bottom: 45px; }
+  @media (max-width: 767px) {
+    .login__forgot {
+      margin-bottom: 35px; } }
 
 .login__forgot a {
   font-family: "Poppins", "Arial", sans-serif;
@@ -3044,10 +3075,6 @@ button.swiper-pagination-bullet {
       top: 5px;
       left: 6px; } }
 
-.modal--open {
-  height: 100vh;
-  overflow: hidden; }
-
 .modal {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3060,11 +3087,14 @@ button.swiper-pagination-bullet {
   opacity: 0;
   visibility: hidden;
   background-color: rgba(29, 22, 19, 0.25); }
-
-.modal--show {
-  opacity: 1;
-  visibility: visible;
-  z-index: 30; }
+  .modal--open {
+    height: 100vh;
+    overflow: hidden; }
+  .modal--show {
+    opacity: 1;
+    visibility: visible;
+    z-index: 30;
+    background-color: #ffffff; }
 
 .modal__content {
   position: relative;
@@ -3074,13 +3104,19 @@ button.swiper-pagination-bullet {
   background-color: white;
   -webkit-box-shadow: 0 5px 32px rgba(226, 221, 215, 0.24);
           box-shadow: 0 5px 32px rgba(226, 221, 215, 0.24); }
-
-.modal__content--login {
-  max-width: 430px;
-  margin-top: 100px; }
-
-.modal__content--cart {
-  margin-top: 372px; }
+  .modal__content--login {
+    max-width: 430px;
+    margin-top: 100px; }
+    @media (max-width: 1023px) {
+      .modal__content--login {
+        max-width: 442px;
+        margin-top: 80px; } }
+    @media (max-width: 767px) {
+      .modal__content--login {
+        max-width: 270px;
+        margin-top: 50px; } }
+  .modal__content--cart {
+    margin-top: 372px; }
 
 .cart__wrap {
   display: -webkit-box;
