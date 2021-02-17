@@ -20,6 +20,13 @@
     z-index: 30;
     background-color: $white;
   }
+
+  &--show-cart {
+    opacity: 1;
+    visibility: visible;
+    z-index: 30;
+    background-color: rgba(29, 22, 19, 0.25);
+  }
 }
 
 .modal__content {
@@ -47,5 +54,15 @@
 
   &--cart {
     margin-top: 372px;
+
+    @media (max-width: $breakpoint-tablet) {
+      max-width: 502px;
+      margin-top: 258px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      max-width: 290px;
+      margin-top: 117px;
+    }
   }
 }

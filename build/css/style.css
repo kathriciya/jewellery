@@ -2116,7 +2116,8 @@ button.swiper-pagination-bullet {
   border: 1px solid #a87b62;
   padding-top: 24px;
   padding-bottom: 21px;
-  margin-bottom: 18px; }
+  margin-bottom: 18px;
+  text-align: center; }
   @media (max-width: 767px) {
     .product__button {
       margin-bottom: 13px; } }
@@ -3095,6 +3096,11 @@ button.swiper-pagination-bullet {
     visibility: visible;
     z-index: 30;
     background-color: #ffffff; }
+  .modal--show-cart {
+    opacity: 1;
+    visibility: visible;
+    z-index: 30;
+    background-color: rgba(29, 22, 19, 0.25); }
 
 .modal__content {
   position: relative;
@@ -3117,6 +3123,14 @@ button.swiper-pagination-bullet {
         margin-top: 50px; } }
   .modal__content--cart {
     margin-top: 372px; }
+    @media (max-width: 1023px) {
+      .modal__content--cart {
+        max-width: 502px;
+        margin-top: 258px; } }
+    @media (max-width: 767px) {
+      .modal__content--cart {
+        max-width: 290px;
+        margin-top: 117px; } }
 
 .cart__wrap {
   display: -webkit-box;
@@ -3130,6 +3144,16 @@ button.swiper-pagination-bullet {
   padding-bottom: 55px;
   padding-left: 34px;
   padding-right: 34px; }
+  @media (max-width: 1023px) {
+    .cart__wrap {
+      padding-left: 31px;
+      padding-right: 32px; } }
+  @media (max-width: 767px) {
+    .cart__wrap {
+      padding-top: 37px;
+      padding-bottom: 45px;
+      padding-left: 15px;
+      padding-right: 14px; } }
 
 .cart__wrapper {
   position: relative;
@@ -3145,6 +3169,14 @@ button.swiper-pagination-bullet {
     left: -34px;
     right: -34px;
     background-color: #f6f5f4; }
+    @media (max-width: 767px) {
+      .cart__wrapper::before {
+        top: 98px;
+        left: -15px;
+        right: -14px; } }
+  @media (max-width: 767px) {
+    .cart__wrapper {
+      margin-bottom: 40px; } }
 
 .cart__close {
   position: absolute;
@@ -3160,6 +3192,10 @@ button.swiper-pagination-bullet {
     color: #a87b62; }
   .cart__close:active svg {
     opacity: 0.7; }
+  @media (max-width: 767px) {
+    .cart__close {
+      top: 15px;
+      right: 15px; } }
 
 .cart__title {
   font-family: "Cormorant Garamond", "Garamond", serif;
@@ -3171,14 +3207,31 @@ button.swiper-pagination-bullet {
   padding: 0;
   margin-bottom: 40px;
   text-align: center; }
+  @media (max-width: 767px) {
+    .cart__title {
+      font-size: 24px;
+      line-height: 29px;
+      width: 189px;
+      margin: 0 auto;
+      margin-bottom: 29px; } }
 
 .cart__img {
   margin-top: 6px;
   margin-right: 20px; }
+  @media (max-width: 1023px) {
+    .cart__img {
+      margin-right: 23px; } }
+  @media (max-width: 767px) {
+    .cart__img {
+      margin-right: 15px; } }
 
 .cart__img img {
   width: 84px;
   height: 79px; }
+  @media (max-width: 767px) {
+    .cart__img img {
+      width: 70px;
+      height: 63px; } }
 
 .cart__number {
   display: -webkit-box;
@@ -3219,6 +3272,13 @@ button.swiper-pagination-bullet {
             appearance: none; }
   .cart__number input:active {
     opacity: 0.7; }
+  @media (max-width: 1023px) {
+    .cart__number input {
+      margin-top: 17px; } }
+  @media (max-width: 767px) {
+    .cart__number input {
+      font-size: 16px;
+      line-height: 21px; } }
 
 .cart__number input::-webkit-input-placeholder {
   color: #1d1613; }
@@ -3288,6 +3348,13 @@ button.swiper-pagination-bullet {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 35px; }
+  @media (max-width: 767px) {
+    .cart__inner {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      margin-bottom: 30px; } }
 
 .cart__text {
   font-style: normal;
@@ -3295,8 +3362,16 @@ button.swiper-pagination-bullet {
   font-size: 14px;
   line-height: 18px;
   margin: 0; }
+  @media (max-width: 767px) {
+    .cart__text {
+      font-size: 12px;
+      line-height: 16px;
+      margin-bottom: 15px; } }
   .cart__text--different {
     font-weight: 500; }
+    @media (max-width: 767px) {
+      .cart__text--different {
+        margin-bottom: 0; } }
 
 .cart__links {
   display: -webkit-box;
@@ -3307,6 +3382,12 @@ button.swiper-pagination-bullet {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+  @media (max-width: 767px) {
+    .cart__links {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
 
 .cart__links-btn {
   max-width: 200px;
@@ -3324,6 +3405,9 @@ button.swiper-pagination-bullet {
   .cart__links-btn--continue {
     background-color: #ffffff;
     color: #1d1613; }
+    @media (max-width: 767px) {
+      .cart__links-btn--continue {
+        margin-bottom: 20px; } }
   .cart__links-btn--checkout {
     background-color: #a87b62;
     color: #ffffff; }
@@ -3331,9 +3415,12 @@ button.swiper-pagination-bullet {
     opacity: 0.3; }
   .cart__links-btn:active {
     opacity: 0.7; }
-
-.cart__product {
-  margin-right: 186px; }
+  @media (max-width: 1023px) {
+    .cart__links-btn {
+      max-width: 204px; } }
+  @media (max-width: 767px) {
+    .cart__links-btn {
+      max-width: 260px; } }
 
 .cart__product p {
   font-family: "Cormorant Garamond", "Garamond", serif;
@@ -3344,7 +3431,30 @@ button.swiper-pagination-bullet {
   margin: 0;
   padding: 0;
   margin-bottom: 9px; }
+  @media (max-width: 767px) {
+    .cart__product p {
+      font-family: "Cormorant Garamond", "Garamond", serif;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 21px;
+      color: #1d1613;
+      margin: 0;
+      padding: 0;
+      margin-bottom: 4px; } }
 
 .cart__product span {
   font-size: 18px;
   line-height: 23px; }
+  @media (max-width: 767px) {
+    .cart__product span {
+      font-size: 16px;
+      line-height: 21px; } }
+
+.cart__product {
+  margin-right: 186px; }
+  @media (max-width: 1023px) {
+    .cart__product {
+      margin-right: 191px; } }
+  @media (max-width: 767px) {
+    .cart__product {
+      margin-right: 32px; } }

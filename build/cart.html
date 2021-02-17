@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Jewellery">
+  <title>Jewellery</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/CormorantGaramond-SemiBold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Poppins-Medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Poppins-Regular.woff2" as="font" crossorigin="anonymous">
+</head>
+
+<body>
+  <main class="class=" main-page"="">
+    <h1 class="visually-hidden">Cart</h1>
+
+    <div class="modal modal--show-cart modal--cart">
+      <div class="modal__content modal__content--cart cart">
+        <div class="cart__wrap">
+        <p class="cart__title">The item was added to your cart</p>
+        <button class="cart__close" type="button">
+          <span class="visually-hidden">Close</span>
+          <svg width="14" height="14">
+            <use xlink:href="img/sprite_auto.svg#icon-close-modal"></use>
+          </svg>
+        </button>
+        <div class="cart__wrapper">
+        <div class="cart__img">
+          <picture>
+            <!-- 1х: 70px; 2x: 140px -->
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/product-popup-mobile@1x.webp 1x, img/product-popup-mobile@2x.webp 2x">
+              <!-- 1х: 88px; 2x: 176px -->
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/product-popup-tablet@1x.webp 1x, img/product-popup-tablet@2x.webp 2x">
+              <!-- 1х: 84px; 2x: 168px -->
+            <source type="image/webp" srcset="img/product-popup-desktop@1x.webp 1x, img/product-popup-desktop@2x.webp 2x">
+              <!-- 1х: 70px; 2x: 140px -->
+            <source media="(max-width: 767px)" srcset="img/product-popup-mobile@1x.jpg 1x, img/product-popup-mobile@2x.jpg 2x">
+              <!-- 1х: 88px; 2x: 176px -->
+            <source media="(max-width: 1023px)" srcset="img/product-popup-tablet@1x.jpg 1x, img/product-popup-tablet@2x.jpg 2x">
+              <!-- 1х: 84px; 2x: 168px -->
+            <img src="img/product-popup-desktop@1x.jpg" srcset="img/product-popup-desktop@1x.jpg" alt="Gold Necklace" width="84" height="79">
+          </picture>
+        </div>
+        <div class="cart__product">
+          <p>Gold Necklace</p>
+          <span>$ 115</span>
+        </div>
+        <form action="https://echo.htmlacademy.ru" method="POST" enctype="multipart/form-data">
+          <div class="cart__number">
+            <button class="cart__btn cart__btn--plus" type="button" aria-label="Increase the number"></button>
+            <input type="number" name="value" id="value" placeholder="1" min="1" max="1000000" required="">
+          <label class="visually-hidden" for="value">Quantity of items in your cart</label>
+            <button class="cart__btn cart__btn--minus" type="button" aria-label="Reduce the number"></button>
+          </div>
+        </form>
+      </div>
+        <div class="cart__inner">
+          <p class="cart__text">You have 1 item in the cart</p>
+          <p class="cart__text cart__text--different">Cart subtotal: $ 115</p>
+        </div>
+        <div class="cart__links">
+          <a class="cart__links-btn cart__links-btn--continue" href="catalog.html">Continue shopping</a>
+          <a class="cart__links-btn cart__links-btn--checkout" href="#">Checkout</a>
+        </div>
+      </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/vendor.js"></script>
+
+</body>
+
+</html>
