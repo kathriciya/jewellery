@@ -2,30 +2,27 @@
 
 (function () {
   var OUT = 27;
-  var button = document.querySelector('.header__header-login .header-login');
-  var login = document.querySelector('.login');
+  var openLogin = document.querySelector('.header-login');
+  var login = document.querySelector('.modal--login');
   var closeLogin = document.querySelector('.login__close');
   var inputEmail = document.querySelector('#login-email');
 
-  function setShowLoginHandler() {
-    button.addEventListener('click', function () {
+  if (openLogin && login) {
+    openLogin.addEventListener('click', function (evt) {
+      evt.preventDefault();
       login.classList.add('modal--show');
       document.body.style.overflow = 'hidden';
-      login.value = localStorage.getItem('inputEmail');
+      localStorage.setItem('email', inputEmail.value);
       inputEmail.focus();
     });
   }
 
-  setShowLoginHandler();
-
-  function setRemoveLoginHandler() {
+  if (closeLogin) {
     closeLogin.addEventListener('click', function () {
       login.classList.remove('modal--show');
       document.body.style.overflow = '';
     });
   }
-
-  setRemoveLoginHandler();
 
   function setKeyPressRemoveLoginHandler(evt) {
     if (evt.keyCode === OUT) {
@@ -36,7 +33,7 @@
 
   document.addEventListener('keydown', setKeyPressRemoveLoginHandler);
 
-  popup.addEventListener('click', function (evt) {
+  login.addEventListener('click', function (evt) {
     var wrap = document.querySelector('.login__wrap');
     if (!wrap.contains(evt.target)) {
       login.classList.remove('modal--show');
