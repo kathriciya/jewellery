@@ -9,21 +9,21 @@
   if (openCart && cart) {
     openCart.addEventListener('click', function (evt) {
       evt.preventDefault();
-      cart.classList.add('modal--show');
+      cart.classList.add('modal--show-cart');
       document.body.style.overflow = 'hidden';
     });
   }
 
   if (closeCart) {
     closeCart.addEventListener('click', function () {
-      cart.classList.remove('modal--show');
+      cart.classList.remove('modal--show-cart');
       document.body.style.overflow = '';
     });
   }
 
   function setKeyPressRemoveCartHandler(evt) {
     if (evt.keyCode === OUT) {
-      cart.classList.remove('modal--show');
+      cart.classList.remove('modal--show-cart');
       document.body.style.overflow = '';
     }
   }
@@ -34,7 +34,7 @@
     cart.addEventListener('click', function (evt) {
       var wrap = document.querySelector('.cart__wrap');
       if (!wrap.contains(evt.target)) {
-        cart.classList.remove('modal--show');
+        cart.classList.remove('modal--show-cart');
       }
     });
   }

@@ -19,8 +19,8 @@
     }
   }
 
-  if (openFilter && filter) {
-    openFiter.addEventListener('click', function (evt) {
+  if (openFilter) {
+    openFilter.addEventListener('click', function (evt) {
       evt.preventDefault();
       filter.classList.add('modal--show');
       document.body.style.overflow = 'hidden';
@@ -45,7 +45,7 @@
 
   if (filter) {
     filter.addEventListener('click', function (evt) {
-      var wrap = document.querySelector('.filter');
+      var wrap = document.querySelector('.filter__form');
       if (!wrap.contains(evt.target)) {
         filter.classList.remove('modal--show');
       }
