@@ -1,5 +1,6 @@
 .price {
   padding: 0 0 18px 27px;
+  display: none;
 
   @media (max-width: $breakpoint-tablet) {
     padding-bottom: 41px;

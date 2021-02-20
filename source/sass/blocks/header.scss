@@ -51,7 +51,7 @@
 .header__container {
   position: relative;
   padding-top: 42px;
-  padding-bottom: 18px;
+  padding-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -71,16 +71,16 @@
 
   &--catalog {
     padding-top: 53px;
+    padding-bottom: 20px;
   }
 
   @media (max-width: $breakpoint-tablet) {
-    // padding: 126px 44px 0 46px;
-    padding-top: 108px;
+    padding-top: 106px;
     flex-direction: column;
   }
 
   @media (max-width: $breakpoint-mobile) {
-    padding-top: 74px;
+    padding-top: 72px;
   }
 }
 

@@ -57,6 +57,16 @@
     background-color: $brown;
     border: 1px solid $brown;
     margin-bottom: 50px;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      border: 1px solid $brown;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
   }
 
   @media (max-width: $breakpoint-mobile) {
@@ -68,9 +78,12 @@
   @include no-list;
   display: flex;
   flex-wrap: wrap;
-  // width: 100%;
   width: 100%;
   justify-content: space-between;
+
+  @media (max-width: $breakpoint-mobile) {
+    justify-content: center;
+  }
 }
 
 .catalog__cards li {
@@ -80,52 +93,58 @@
   max-width: 270px;
   height: auto;
   margin-right: 15px;
-  margin-bottom: 37px;
+  margin-bottom: 33px;
+  text-align: center;
 
   &:nth-child(3n) {
     margin-right: 0;
   }
 
   @media (max-width: $breakpoint-tablet) {
-    margin-bottom: 35px;
+    margin-bottom: 32px;
   }
 
   @media (max-width: $breakpoint-mobile) {
     width: 45%;
     margin-right: 0;
-    margin-bottom: 25px;
+    margin-bottom: 22px;
+
+    &:not(:nth-child(2n)) {
+      margin-right: 27px;
+    }
   }
 }
 
-.catalog__img {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.catalog__img img {
+.catalog__cards img {
   width: 100%;
   height: auto;
 
-  @media (max-width: $breakpoint-tablet) {
-    width: 206px;
-    height: 208px;
-  }
+  // Временно закомментировала
 
-  @media (max-width: $breakpoint-mobile) {
-    width: 130px;
-    height: 136px;
-  }
+  // @media (max-width: $breakpoint-tablet) {
+  //   width: 206px;
+  //   height: 208px;
+  // }
+
+  // @media (max-width: $breakpoint-mobile) {
+  //   width: 130px;
+  //   height: 136px;
+  // }
 }
 
 .catalog__cards p {
-  margin-top: 15px;
-  margin-bottom: 6px;
+  margin-top: 17px;
+  margin-bottom: 5px;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-top: 13px;
+    margin-bottom: 5px;
+  }
 
 
   @media (max-width: $breakpoint-mobile) {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 11px;
   }
 }
 

@@ -231,10 +231,10 @@
   transform: rotate(180deg);
 }
 
+.filter__item--nojs .filter__list {
+  display: block;
+}
 
-// .filter__form--nojs {
-//   .filter__list,
-//   .filter__price {
-//     display: block;
-//   }
-
+.filter__item--nojs .filter__price {
+  display: block;
+}
